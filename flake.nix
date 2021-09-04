@@ -30,6 +30,8 @@
     nixosModule = { lib, config, ... }: let
       cfg = config.services.hydra.provisioner;
     in {
+      _file = "hydra-provisioner";
+
       imports = [ ./module.nix ];
 
       config = with lib; {
